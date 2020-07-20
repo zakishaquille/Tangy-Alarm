@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.RingActivity">
+        <activity android:name=".activities.TurnOffActivity">
         </activity>
 
         <receiver android:name=".broadcastreceiver.AlarmBroadcastReceiver">

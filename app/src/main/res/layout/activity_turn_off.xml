@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/turnOffLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turn_off_bg"
+    android:orientation="vertical">
+
+    <DigitalClock
+        android:id="@+id/digitalClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage" />
+
+    <ImageView
+        android:id="@+id/shakeImage"
+        android:layout_width="190dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_weight="6"
+        android:visibility="visible"
+        app:srcCompat="@drawable/shake_image"
+        android:contentDescription="Appear 1st when alarm activated" />
+
+    <ImageView
+        android:id="@+id/metalImage"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_weight="6"
+        android:visibility="gone"
+        app:srcCompat="@drawable/compass_image"
+        android:contentDescription="Appear 2nd after shake unlock" />
+
+    <TextView
+        android:id="@+id/guideText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:text="Shake your phone 5 times to turn off the alarm"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:text="0"
+        android:textSize="40dp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

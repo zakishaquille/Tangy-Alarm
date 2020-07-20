@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.learntodroid.simplealarmclock.R;
-import com.learntodroid.simplealarmclock.activities.RingActivity;
+import com.learntodroid.simplealarmclock.activities.TurnOffActivity;
 
 import static com.learntodroid.simplealarmclock.application.App.CHANNEL_ID;
 import static com.learntodroid.simplealarmclock.broadcastreceiver.AlarmBroadcastReceiver.TITLE;
@@ -36,7 +36,7 @@ public class AlarmService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Intent notificationIntent = new Intent(this, RingActivity.class);
+        Intent notificationIntent = new Intent(this, TurnOffActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 
         String alarmTitle = String.format("%s Alarm", intent.getStringExtra(TITLE));
