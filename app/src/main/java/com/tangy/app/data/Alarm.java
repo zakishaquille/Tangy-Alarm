@@ -137,9 +137,6 @@ public class Alarm {
             calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
         }
 
-        String toastText = String.format("Alarm %s scheduled for %s at %02d:%02d", title, DayUtil.toDay(calendar.get(Calendar.DAY_OF_WEEK)), hour, minute, alarmId);
-        Toast.makeText(context, toastText, Toast.LENGTH_LONG).show();
-
         if (!recurring) {
             alarmManager.setExact(
                     AlarmManager.RTC_WAKEUP,
@@ -157,9 +154,6 @@ public class Alarm {
         }
 
         this.started = true;
-
-        Log.i("schedule", toastText);
-
     }
 
     public void cancelAlarm(Context context) {
@@ -168,10 +162,6 @@ public class Alarm {
         PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(context, alarmId, intent, 0);
         alarmManager.cancel(alarmPendingIntent);
         this.started = false;
-
-        String toastText = String.format("Alarm cancelled for %02d:%02d with id %d", hour, minute, alarmId);
-        Toast.makeText(context, toastText, Toast.LENGTH_SHORT).show();
-        Log.i("cancel", toastText);
     }
 
     public String getRecurringDaysText() {
