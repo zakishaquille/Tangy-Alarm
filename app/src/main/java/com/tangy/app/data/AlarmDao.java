@@ -2,6 +2,7 @@ package com.tangy.app.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
@@ -12,6 +13,9 @@ import java.util.List;
 public interface AlarmDao {
     @Insert
     void insert(Alarm alarm);
+
+    @Delete
+    void deleteAlarm(Alarm alarm);
 
     @Query("DELETE FROM alarm_table")
     void deleteAll();
