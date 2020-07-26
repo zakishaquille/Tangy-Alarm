@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="2"
-        android:text="Shake your phone 5 times to turn off the alarm"
+        android:text="Shake your phone 10 times to turn off the alarm"
         android:textColor="@color/black" />
 
     <TextView
