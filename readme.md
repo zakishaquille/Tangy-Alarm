@@ -1,7 +1,7 @@
 # Tangy Alarm
 
 ## Live app
-<a href="https://play.google.com/store/apps/details?id=id.ac.stiki.doleno.tangyalarm">
+<a target="_blank" href="https://play.google.com/store/apps/details?id=id.ac.stiki.doleno.tangyalarm">
   <img src="https://user-images.githubusercontent.com/19787127/116289249-890db800-a7bc-11eb-8e9b-605ac4c0c743.png" width="20%" />
 </a>
 
